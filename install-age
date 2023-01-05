@@ -1,0 +1,13 @@
+#!/bin/bash
+
+curl https://github.com/FiloSottile/age/releases/download/v1.1.1/age-v1.1.1-linux-amd64.tar.gz -L -o /tmp/age.tar.gz
+gunzip /tmp/age.tar.gz
+
+mkdir -p ~/bin
+tar xfv /tmp/age.tar -C /tmp
+
+mv /tmp/age/age ~/bin/
+mv /tmp/age/age-keygen ~/bin/
+
+rm /tmp/age.tar
+rm -rf /tmp/age
