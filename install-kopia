@@ -1,0 +1,13 @@
+#!/bin/bash
+
+KOPIA_VER=kopia-0.12.1-linux-x64
+
+curl https://github.com/kopia/kopia/releases/download/v0.12.1/$KOPIA_VER.tar.gz -L -o /tmp/kopia.tar.gz
+
+mkdir -p ~/bin
+tar xfv /tmp/kopia.tar.gz -C /tmp
+
+mv /tmp/$KOPIA_VER/kopia ~/bin/
+
+rm /tmp/kopia.tar.gz
+rm -rf /tmp/$KOPIA_VER
